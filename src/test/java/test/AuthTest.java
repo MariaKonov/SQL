@@ -32,7 +32,7 @@ public class AuthTest {
     @DisplayName("Should succesfully Login")
     void shouldSuccesfullLogin() {
         var loginPage = open("http://localhost:9999", LoginPage.class);
-        var authInfo = DataHelper.generateRandomLogin();
+        var authInfo = DataHelper.getAuthInfoUseTestData();
         var verificationPage = loginPage.validLogin(authInfo);
         verificationPage.verifyVerificationPageVisiblity();
         var verificationCode = SQLHelper.getVerificationCode();

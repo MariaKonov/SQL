@@ -30,5 +30,4 @@ public class VerificationPage {
         codeField.setValue(verificationCode);
         verifyButton.click();
     }
-
 }
